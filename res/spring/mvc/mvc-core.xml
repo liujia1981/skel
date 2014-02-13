@@ -39,7 +39,9 @@
 	</bean>
 
 	<!-- 扫描 Controller -->
-	<context:component-scan base-package="com.kingyee.project.controller" use-default-filters="false">
+	<context:component-scan use-default-filters="false" name-generator="spring.mvc.util.ControllerBeanNameGenerator"
+		base-package="com.kingyee.project.controller,
+		com.kingyee.project.controller2" >
 		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller" />
 	</context:component-scan>
 	

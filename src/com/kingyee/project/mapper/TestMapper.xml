@@ -5,7 +5,15 @@
 		insert into user values (#{id}, #{name}, #{sex})
 	</insert>
 	
-	<select id="get2" resultType="java.util.HashMap" >
+	<select id="get2" resultType="java.util.HashMap" parameterType="com.kingyee.project.mapper.bean.User" >
 		select * from user
+		<trim prefix="where" prefixOverrides="and | or" >
+		<if test="id != null">
+		and id = #{id}
+		</if>
+		<if test="name != null">
+		and name = #{name}
+		</if>
+		</trim>
 	</select>
 </mapper>

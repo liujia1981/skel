@@ -23,7 +23,7 @@
 	</listener>
 	<!-- 保存 Http 信息的监听器 -->
 	<listener>
-		<listener-class>spring.mvc.util.HttpInfoHolderListener</listener-class>
+		<listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
 	</listener>
 
 	<!-- Spring MVC -->

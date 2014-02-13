@@ -5,6 +5,8 @@ import java.util.HashMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import spring.mvc.util.RequestUtil;
+
 import com.kingyee.project.mapper.TestMapper;
 import com.kingyee.project.mapper.UserMapper;
 import com.kingyee.project.mapper.bean.User;
@@ -19,6 +21,7 @@ public class TestService {
 	
 	public HashMap getUser() {
 //		return testMapper.getUser();
+		
 		return testMapper.get2();
 	}
 	

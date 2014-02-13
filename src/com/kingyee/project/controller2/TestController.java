@@ -1,4 +1,4 @@
-package com.kingyee.project.controller;
+package com.kingyee.project.controller2;
 
 import java.util.HashMap;
 
@@ -21,6 +21,7 @@ import com.kingyee.project.mapper.bean.User;
 import com.kingyee.project.service.TestService;
 
 @Controller
+@RequestMapping("/hello")
 public class TestController {
 
 	@Autowired
