@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.servlet.ModelAndView;
 
+import spring.mvc.util.SpringMVCContext;
 import spring.mvc.util.WebUtil;
 import spring.util.SpringContext;
 
@@ -31,7 +32,7 @@ public class TestController {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("index");
 		
-		WebApplicationContext wcx = WebUtil.getMVCApplicationContext();
+		WebApplicationContext wcx = SpringMVCContext.getMVCContext();
 		ApplicationContext cx = SpringContext.getAppContext();
 		
 		HashMap m = testService.getUser();

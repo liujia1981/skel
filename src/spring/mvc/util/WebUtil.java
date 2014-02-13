@@ -22,11 +22,6 @@ import org.springframework.web.util.WebUtils;
  * 
  */
 public class WebUtil {
-	
-	public static WebApplicationContext getMVCApplicationContext() {
-		return RequestContextUtils.getWebApplicationContext(getRequest());
-	}
-	
 	/**
 	 * 取得 request
 	 * 
