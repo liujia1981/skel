@@ -5,7 +5,7 @@ import java.util.HashMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import spring.mvc.util.RequestUtil;
+import spring.mvc.util.WebUtil;
 
 import com.kingyee.project.mapper.TestMapper;
 import com.kingyee.project.mapper.UserMapper;
