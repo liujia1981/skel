@@ -8,8 +8,10 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
+import org.springframework.web.servlet.support.RequestContextUtils;
 import org.springframework.web.util.WebUtils;
 
 /**
@@ -20,6 +22,11 @@ import org.springframework.web.util.WebUtils;
  * 
  */
 public class WebUtil {
+	
+	public static WebApplicationContext getMVCApplicationContext() {
+		return RequestContextUtils.getWebApplicationContext(getRequest());
+	}
+	
 	/**
 	 * 取得 request
 	 * 

@@ -11,10 +11,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.support.RequestContext;
 
+import spring.mvc.util.WebUtil;
 import spring.util.SpringContext;
 
 import com.kingyee.project.mapper.bean.User;
@@ -31,7 +31,8 @@ public class TestController {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("index");
 		
-		SpringContext.getAppContext();
+		WebApplicationContext wcx = WebUtil.getMVCApplicationContext();
+		ApplicationContext cx = SpringContext.getAppContext();
 		
 		HashMap m = testService.getUser();
 		mv.addObject("m", m);
